@@ -1,0 +1,18 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.17.3/.schema/devbox.schema.json",
+  "packages": [
+    "rustup@latest",
+    "libiconv@latest",
+    "localstack@latest"
+  ],
+  "env": {
+    "PROJECT_DIR": "$PWD"
+  },
+  "shell": {
+    "init_hook": [
+      ". ./devbox.sh",
+      "rustup default stable",
+      "cargo fetch"
+    ]
+  }
+}
